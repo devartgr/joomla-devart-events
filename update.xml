@@ -14,7 +14,7 @@
             <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-events/releases/download/v1.0.0/pkg_devartevents_v1.0.0.zip</downloadurl>
         </downloads>
 
-        <sha256>b92befbe13a0d9cff8d819346004d6f306518eb5d1f944fe04dee66a95f72f4e</sha256>
+        <sha256>df8956ab7be1fa47e73588d83648b73a49491fd9b16099fa07e59a01ddfe2a53</sha256>
 
         <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-events/main/changelog.xml</changelogurl>
 
