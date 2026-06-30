@@ -1,1 +1,48 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+    <changelog>
+        <element>pkg_devartevents</element>
+        <type>package</type>
+        <version>1.0.0</version>
+        <addition>
+            <item>Added full Joomla 6 native DevArt Events package</item>
+            <item>Added administrator component for managing events, categories, tags and venues</item>
+            <item>Added frontend module for displaying event lists</item>
+            <item>Added support for multiple event dates per event</item>
+            <item>Added Today, Upcoming, Past, All and Featured event views</item>
+            <item>Added venue manager with saved venues and manual venue support</item>
+            <item>Added map picker support for event and venue locations</item>
+            <item>Added Google Maps and OpenStreetMap rendering support</item>
+            <item>Added calendar display with event popups</item>
+            <item>Added Joomla menu items for event listings, calendar and event detail views</item>
+            <item>Added event image, contact, website and social link fields</item>
+            <item>Added Google Event JSON-LD structured data</item>
+            <item>Added OpenGraph metadata support</item>
+            <item>Added Twitter Cards metadata support</item>
+            <item>Added import and export tools for DevArt Events data backup</item>
+            <item>Added GitHub-based Joomla update server support</item>
+        </addition>
+        <change>
+            <item>Frontend event ordering is based on event dates instead of created or publish dates</item>
+            <item>Today events are ordered by event time ascending</item>
+            <item>Upcoming events are ordered by next available event date ascending</item>
+            <item>Past events are ordered by latest past event date descending</item>
+            <item>All events are ordered by latest event date descending</item>
+            <item>Administrator sorting follows Joomla-style list behavior for events, categories and tags</item>
+            <item>Frontend rendering optimized for editorial, cultural, municipal and high-traffic event websites</item>
+        </change>
+        <security>
+            <item>Added ACL support for administrator operations</item>
+            <item>Added CSRF protection for administrator actions</item>
+            <item>Added safe output escaping for administrator and frontend rendering</item>
+            <item>Added controlled map URL rendering for frontend map output</item>
+            <item>Built for Joomla 6 and PHP 8.2+ using modern namespaces and production-safe architecture</item>
+        </security>
+        <note>
+            <item>Initial public stable release of DevArt Events for Joomla 6</item>
+            <item>Built for Joomla 6 only with PHP 8.2+</item>
+            <item>No migration required for new installations</item>
+            <item>Always test on a staging environment before production deployment</item>
+        </note>
+    </changelog>
+</changelogs>
