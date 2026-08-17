@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
-    <update>
-        <name>DevArt Events</name>
-        <description>DevArt Events for Joomla</description>
-        <element>com_devartevents</element>
-        <type>component</type>
-        <client>administrator</client>
-        <version>1.0.0</version>
-
-        <infourl title="DevArt Events">https://github.com/devartgr/joomla-devart-events</infourl>
-
-        <downloads>
-            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-events/releases/download/v1.0.0/pkg_devartevents_v1.0.0.zip</downloadurl>
-        </downloads>
-
-        <sha256>005ad45bf5338b36d35de9791a894ca4cf9888dc859a5f9b53a3c063c820bba8</sha256>
-
-        <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-events/main/changelog.xml</changelogurl>
-
-        <targetplatform name="joomla" version="6.*" />
-        <php_minimum>8.2</php_minimum>
-
-        <maintainer>Kostas Stathopoulos</maintainer>
-        <maintainerurl>https://devart.gr</maintainerurl>
-    </update>
+  <update>
+    <name>DevArt Events Package</name>
+    <description>DevArt Events package for Joomla 6.</description>
+    <element>pkg_devartevents</element>
+    <type>package</type>
+    <client>site</client>
+    <version>1.0.11</version>
+    <infourl title="DevArt Events 1.0.11">https://github.com/devartgr/joomla-devart-events/releases/tag/v1.0.11</infourl>
+    <downloads>
+      <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-events/releases/download/v1.0.11/pkg_devartevents_v1.0.11.zip</downloadurl>
+    </downloads>
+    <sha256>bdb860762e91f38e12ca389af996003ba0ec84e3eb6d489a196b42c283f16d11</sha256>
+    <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-events/main/changelog.xml</changelogurl>
+    <targetplatform name="joomla" version="6.*"/>
+    <php_minimum>8.3.0</php_minimum>
+    <tags>
+      <tag>stable</tag>
+    </tags>
+    <maintainer>Kostas Stathopoulos - DevArt</maintainer>
+    <maintainerurl>https://devart.gr</maintainerurl>
+  </update>
 </updates>
