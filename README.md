@@ -4,7 +4,7 @@ Professional event management for Joomla 6, designed for municipalities, cultura
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.11-orange)
+![Release](https://img.shields.io/badge/Version-1.1.0-orange)
 ![License](https://img.shields.io/badge/License-GPL--2.0--or--later-red)
 
 ## Overview
@@ -73,7 +73,7 @@ Today, Upcoming, and Past classification is based on event start dates.
 
 When an event contains multiple dates, it is included when any matching occurrence satisfies the selected source or date range.
 
-An event that started before today is treated as past even if its optional end date is later. This start-based behavior is intentional in version 1.0.11.
+An event that started before today is treated as past even if its optional end date is later. This start-based behavior is intentional.
 
 ## Administrator
 
@@ -89,9 +89,8 @@ The Joomla administrator interface provides:
 - Category filtering
 - Search and sortable event lists
 - Import, export, backup, and maintenance tools
+- Dashboard hub with Options and Modules shortcuts
 - Configuration for maps, media, frontend layouts, SEO, and structured data
-
-Event-level manual ordering is not displayed in the administrator event list. Frontend ordering is controlled by menu and module configuration and by the selected event-date source.
 
 ## Categories and Tags
 
@@ -138,10 +137,9 @@ Available map functionality includes:
 - Draggable map markers
 - Event list maps
 - Module maps
-- Configurable map display
-- Safe frontend map rendering
-
-Leaflet assets are loaded with Subresource Integrity metadata.
+- Configurable map display and map event limit
+- Locally vendored Leaflet assets
+- OpenStreetMap attribution on map controls
 
 ## Calendar
 
@@ -153,6 +151,7 @@ Calendar functionality includes:
 - Previous and next month navigation
 - Event indicators and links
 - Configurable module calendar range
+- Site-timezone-aware month bounds and titles
 - Responsive frontend rendering
 
 ## Frontend Event Listings
@@ -171,6 +170,7 @@ Frontend listings support:
 - Responsive desktop, tablet, and mobile columns
 - Optional event images, intro text, location, contact information, tags, and featured badges
 - Clean Joomla alias routing
+- Canonical URLs based on Joomla `live_site`
 
 ## Frontend Module
 
@@ -189,7 +189,9 @@ The DevArt Events module can display:
 - Event maps
 - Event calendars
 
-The component and module use the same event-date engine for consistent results.
+Module single-event and selected-events fields use a searchable modal picker. Category, tag and map filters use Joomla list-fancy-select.
+
+The component and module use the same event-date engine and RouteHelper-based links for consistent results.
 
 ## Performance
 
@@ -204,12 +206,9 @@ Performance features include:
 - Database-level totals
 - Batched indexing of existing and imported event dates
 - Automatic date-index synchronization after event changes
-- Bounded calendar queries
-- No fixed 1000-event ceiling for date-aware module sources
+- Bounded calendar and map queries
 - Cache-friendly rendering
 - Minimal frontend dependencies
-
-The canonical event data remains stored with the event, while the indexed occurrence table is maintained as derived data for efficient queries.
 
 ## SEO and Structured Data
 
@@ -222,8 +221,6 @@ Built-in SEO support includes:
 - Joomla metadata integration
 - SEO-friendly alias routing
 - Configurable event image and description output
-
-Optional Schema.org properties such as performer, organizer, and offers are not required for an event to render.
 
 ## Import and Export
 
@@ -250,18 +247,27 @@ Event media functionality includes:
 - Main image and gallery support
 - Existing Media Manager images remain unmodified
 
-Direct optimized uploads are processed when the event is saved.
-
 ## Multilingual Support
 
-Version 1.0.11 includes:
+Version 1.1.0 includes:
 
 - English (`en-GB`)
 - Greek (`el-GR`)
+- French (`fr-FR`)
+- German (`de-DE`)
+- Spanish (`es-ES`)
+- Italian (`it-IT`)
+- Portuguese Brazil (`pt-BR`)
+- Czech (`cs-CZ`)
+- Dutch (`nl-NL`)
+- Polish (`pl-PL`)
+- Russian (`ru-RU`)
+- Ukrainian (`uk-UA`)
+- Japanese (`ja-JP`)
+- Turkish (`tr-TR`)
+- Chinese Simplified (`zh-CN`)
 
 Administrator, frontend, module, map, calendar, contact, share, and package-installation text uses Joomla language keys.
-
-Additional Joomla language packs can translate the component and module without PHP or JavaScript overrides.
 
 ## Security
 
@@ -273,8 +279,9 @@ Security features include:
 - Joomla Framework filesystem APIs
 - Input validation
 - Escaped administrator and frontend output
+- Hardened HTML/URL sanitization
 - Controlled map and iframe URL handling
-- Subresource Integrity metadata for Leaflet assets
+- Absolute URLs prefer configured `live_site`
 - Safe package and manifest validation
 - No backward-compatibility plugin requirement
 
@@ -282,7 +289,7 @@ Security features include:
 
 1. Download the latest package ZIP.
 2. Open **System → Install → Extensions** in Joomla.
-3. Upload `pkg_devartevents_v1.0.11.zip`.
+3. Upload `pkg_devartevents_v1.1.0.zip`.
 4. Confirm that both the component and module were installed.
 5. Open **Components → DevArt Events** and review the configuration.
 6. Create or import events and configure the required Joomla menu items or modules.
@@ -303,32 +310,31 @@ Updates are applied to the complete `pkg_devartevents` package so the component 
 
 ## Current Release
 
-Version: `1.0.11`
+Version: `1.1.0`
 
 Download:
 
 ```text
-https://github.com/devartgr/joomla-devart-events/releases/download/v1.0.11/pkg_devartevents_v1.0.11.zip
+https://github.com/devartgr/joomla-devart-events/releases/download/v1.1.0/pkg_devartevents_v1.1.0.zip
 ```
 
 SHA-256:
 
 ```text
-bdb860762e91f38e12ca389af996003ba0ec84e3eb6d489a196b42c283f16d11
+abb40dc7292ce85ec57fa17c83c98602d396964fef469dbfcb345c4c1d4529df
 ```
 
 Release notes:
 
 ```text
-https://github.com/devartgr/joomla-devart-events/releases/tag/v1.0.11
+https://github.com/devartgr/joomla-devart-events/releases/tag/v1.1.0
 ```
 
 ## Verification
 
-Version 1.0.11 passed:
+Version 1.1.0 passed:
 
 - PHP syntax validation
-- JavaScript syntax validation
 - XML validation
 - Manifest validation
 - Manifest reference validation
@@ -337,7 +343,7 @@ Version 1.0.11 passed:
 - Source-integrity validation
 - ZIP archive-integrity validation
 - SHA-256 verification
-- Installation and functional testing on Joomla 6.1.2
+- Local Herd installation smoke QA on Joomla 6
 
 Repository validation does not replace testing on the target Joomla installation.
 
@@ -358,16 +364,6 @@ Build a new non-overwriting package with:
 ```shell
 php scripts/build.php
 ```
-
-The build process:
-
-- Reads the package manifest
-- Validates PHP, XML, manifests, references, versions, and language files
-- Creates the declared component and module archives
-- Creates the outer Joomla package
-- Verifies source integrity
-- Generates a SHA-256 checksum
-- Refuses to overwrite an existing release build
 
 ## License
 
