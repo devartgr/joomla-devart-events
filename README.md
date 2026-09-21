@@ -4,7 +4,7 @@ Professional event management for Joomla 6, designed for municipalities, cultura
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.0-orange)
+![Release](https://img.shields.io/badge/Version-1.1.1-orange)
 ![License](https://img.shields.io/badge/License-GPL--2.0--or--later-red)
 
 ## Overview
@@ -249,7 +249,7 @@ Event media functionality includes:
 
 ## Multilingual Support
 
-Version 1.1.0 includes:
+Version 1.1.1 includes:
 
 - English (`en-GB`)
 - Greek (`el-GR`)
@@ -289,7 +289,7 @@ Security features include:
 
 1. Download the latest package ZIP.
 2. Open **System → Install → Extensions** in Joomla.
-3. Upload `pkg_devartevents_v1.1.0.zip`.
+3. Upload `pkg_devartevents_v1.1.1.zip`.
 4. Confirm that both the component and module were installed.
 5. Open **Components → DevArt Events** and review the configuration.
 6. Create or import events and configure the required Joomla menu items or modules.
@@ -310,29 +310,29 @@ Updates are applied to the complete `pkg_devartevents` package so the component 
 
 ## Current Release
 
-Version: `1.1.0`
+Version: `1.1.1`
 
 Download:
 
 ```text
-https://github.com/devartgr/joomla-devart-events/releases/download/v1.1.0/pkg_devartevents_v1.1.0.zip
+https://github.com/devartgr/joomla-devart-events/releases/download/v1.1.1/pkg_devartevents_v1.1.1.zip
 ```
 
 SHA-256:
 
 ```text
-abb40dc7292ce85ec57fa17c83c98602d396964fef469dbfcb345c4c1d4529df
+6cdb251bfb2d059712d1a003e478dbe07beaec671eee84100b0d97ef019dbf1f
 ```
 
 Release notes:
 
 ```text
-https://github.com/devartgr/joomla-devart-events/releases/tag/v1.1.0
+https://github.com/devartgr/joomla-devart-events/releases/tag/v1.1.1
 ```
 
 ## Verification
 
-Version 1.1.0 passed:
+Version 1.1.1 passed:
 
 - PHP syntax validation
 - XML validation

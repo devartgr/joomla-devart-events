@@ -4,6 +4,21 @@
     <changelog>
         <element>pkg_devartevents</element>
         <type>package</type>
+        <version>1.1.1</version>
+        <fix>
+            <item>Event Settings save now clears the Joomla _system component cache so listing, detail, calendar and media defaults persist on sites with caching enabled</item>
+            <item>Calendar range, theme and marker icon defaults are included in the allowed settings fields and save correctly</item>
+        </fix>
+        <note>
+            <item>Maintenance release for Event Settings persistence</item>
+            <item>No database schema migration required</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartevents</element>
+        <type>package</type>
         <version>1.1.0</version>
         <addition>
             <item>Bundled administrator, site, module and package language packs for fr-FR, de-DE, es-ES, it-IT, pt-BR, cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR and zh-CN alongside en-GB and el-GR</item>
