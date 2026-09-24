@@ -6,12 +6,12 @@
         <element>pkg_devartevents</element>
         <type>package</type>
         <client>site</client>
-        <version>1.1.1</version>
+        <version>1.1.2</version>
         <infourl title="DevArt Events">https://github.com/devartgr/joomla-devart-events</infourl>
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-events/releases/download/v1.1.1/pkg_devartevents_v1.1.1.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-events/releases/download/v1.1.2/pkg_devartevents_v1.1.2.zip</downloadurl>
         </downloads>
-        <sha256>6cdb251bfb2d059712d1a003e478dbe07beaec671eee84100b0d97ef019dbf1f</sha256>
+        <sha256>84a8c12834ebf8f35f592bacb5e1cfa4bde60ebd81d8e6cfb5269e0201be3d0c</sha256>
         <tags>
             <tag>stable</tag>
         </tags>

@@ -4,6 +4,25 @@
     <changelog>
         <element>pkg_devartevents</element>
         <type>package</type>
+        <version>1.1.2</version>
+        <change>
+            <item>Administrator templates load core, multiselect and form.validate via WebAssetManager instead of deprecated HTMLHelper behavior helpers</item>
+            <item>Database access uses DatabaseInterface::class from the DI container instead of the DatabaseDriver string alias</item>
+            <item>Site EventModel now extends BaseModel with DatabaseAwareTrait instead of BaseDatabaseModel</item>
+        </change>
+        <fix>
+            <item>Event detail SEO uses application sitename instead of deprecated Factory::getConfig()</item>
+        </fix>
+        <note>
+            <item>Joomla 7 forward-compatibility maintenance release</item>
+            <item>No database schema migration required</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartevents</element>
+        <type>package</type>
         <version>1.1.1</version>
         <fix>
             <item>Event Settings save now clears the Joomla _system component cache so listing, detail, calendar and media defaults persist on sites with caching enabled</item>
