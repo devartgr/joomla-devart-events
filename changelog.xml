@@ -4,6 +4,20 @@
     <changelog>
         <element>pkg_devartevents</element>
         <type>package</type>
+        <version>1.1.3</version>
+        <fix>
+            <item>Frontend menu lookup no longer filters by MenuItem::client_id. SiteMenu does not expose that property, so getItems(..., 'client_id') produced Undefined property warnings under PHP 8.x (GitHub issue #2).</item>
+        </fix>
+        <note>
+            <item>Same class of fix as DevArt Documents for SiteMenu/MenuItem client_id</item>
+            <item>No database schema migration required</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartevents</element>
+        <type>package</type>
         <version>1.1.2</version>
         <change>
             <item>Administrator templates load core, multiselect and form.validate via WebAssetManager instead of deprecated HTMLHelper behavior helpers</item>
