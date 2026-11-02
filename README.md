@@ -4,7 +4,7 @@ Professional event management for Joomla 6, designed for municipalities, cultura
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.4-orange)
+![Release](https://img.shields.io/badge/Version-1.2.0-orange)
 ![License](https://img.shields.io/badge/License-GPL--2.0--or--later-red)
 
 ## Overview
@@ -21,8 +21,10 @@ The package installs:
 
 - `com_devartevents` — administrator and frontend event component
 - `mod_devartevents` — configurable frontend event module
+- `plg_content_devarteventscomments` — thin Comments host for event detail pages
 
-No plugins are installed by the package.
+`com_devartcomments` 1.0.83+ is a soft dependency (not bundled). The panel
+appears only when Comments is enabled and Comments Settings `enable_events` is On.
 
 ## Requirements
 
@@ -249,7 +251,7 @@ Event media functionality includes:
 
 ## Multilingual Support
 
-Version 1.1.4 includes:
+Version 1.2.0 includes:
 
 - English (`en-GB`)
 - Greek (`el-GR`)
@@ -289,7 +291,7 @@ Security features include:
 
 1. Download the latest package ZIP.
 2. Open **System → Install → Extensions** in Joomla.
-3. Upload `pkg_devartevents_v1.1.4.zip`.
+3. Upload `pkg_devartevents_v1.2.0.zip`.
 4. Confirm that both the component and module were installed.
 5. Open **Components → DevArt Events** and review the configuration.
 6. Create or import events and configure the required Joomla menu items or modules.
@@ -310,29 +312,23 @@ Updates are applied to the complete `pkg_devartevents` package so the component 
 
 ## Current Release
 
-Version: `1.1.4`
+Version: `1.2.0`
 
 Download:
 
 ```text
-https://github.com/devartgr/joomla-devart-events/releases/download/v1.1.4/pkg_devartevents_v1.1.4.zip
+https://github.com/devartgr/joomla-devart-events/releases/download/v1.2.0/pkg_devartevents_v1.2.0.zip
 ```
 
 SHA-256:
 
 ```text
-da835845a24d678e82144a3733a4179b0d4d50f438aba3acd6da874cad80ade4
-```
-
-Release notes:
-
-```text
-https://github.com/devartgr/joomla-devart-events/releases/tag/v1.1.4
+9690e77f41b80a2f2d757cf12b02c1f7ae95ee40beef4ab31eab90873d391179
 ```
 
 ## Verification
 
-Version 1.1.4 passed:
+Version 1.2.0 passed:
 
 - PHP syntax validation
 - XML validation

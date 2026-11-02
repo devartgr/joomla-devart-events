@@ -4,6 +4,43 @@
     <changelog>
         <element>pkg_devartevents</element>
         <type>package</type>
+        <version>1.2.0</version>
+        <addition>
+            <item>Thin content plugin plg_content_devarteventscomments hosts DevArt Comments on event detail pages (context com_devartevents.item)</item>
+            <item>JSON backup/restore includes the venues table</item>
+            <item>Denormalised events.last_start (MAX non-cancelled occurrence start) with install/update backfill and indexes</item>
+            <item>DisplaySettingsHelper for list display state resolution</item>
+            <item>Opt-in guest Today/Upcoming Cache-Control until site-local midnight (default Off)</item>
+            <item>Tools action to clear module thumbnail cache; capped thumb GC on admin writes</item>
+        </addition>
+        <change>
+            <item>Comments panel appears only when com_devartcomments is enabled and Comments Settings enable_events is On</item>
+            <item>Permanent event delete notifies Comments purgeForItem via onContentAfterDelete (soft-fail if Comments is absent)</item>
+            <item>Public list limit is clamped after ListModel populateState so ?limit= cannot bypass the 100-row cap</item>
+            <item>Permanent venue delete unlinks venue_id on event locations instead of deleting location rows</item>
+            <item>Clearing all event location fields removes the primary location row</item>
+            <item>Category save/delete/duplicate rebuilds nested-set lft/rgt; duplicate skips empty modified under MySQL strict mode</item>
+            <item>Missing category/tag detail URLs with an explicit unresolved id return HTTP 404</item>
+            <item>Removed Dashboard/Tools com_config Options shortcuts that wiped Settings default_* params</item>
+            <item>List count queries skip the date-order derived join; category/tag badge selects load only when display flags are On</item>
+            <item>Primary location uses LEFT JOIN is_primary=1; expandCategoryIds uses nested-set ranges with request memoization</item>
+            <item>All/Past-style list and module ordering uses last_start without a derived date join; Today/Upcoming/Calendar keep applyOrderJoin</item>
+            <item>Admin writes clear Joomla page cache; trash/restore fire onContentChangeState for DevArt Utils auto-clean</item>
+            <item>DevArt Gallery field lists active indexed galleries; Event Dates UI uses the shared calendar mask icon</item>
+            <item>Removed unused sort_order/featured_first/ajax_filtering options; WAM asset versions use auto with joomla.asset.json 1.2.0</item>
+        </change>
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Comments panel requires com_devartcomments 1.0.83+ with enable_events On (Comments owns that flag; keep Off until pair-QA)</item>
+            <item>Comments is a soft dependency and is not bundled inside this package</item>
+            <item>Cloudflare HTML URL purge after save is owned by DevArt Utils plg_system_devartcleancache</item>
+            <item>Recommended update for all DevArt Events installations on Joomla 6</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartevents</element>
+        <type>package</type>
         <version>1.1.4</version>
         <change>
             <item>Hardening cycle: data integrity, SEO/404, visibility, module dispatcher, performance, Tools/security, Gallery bridge, and cache</item>
