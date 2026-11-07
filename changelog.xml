@@ -4,6 +4,23 @@
     <changelog>
         <element>pkg_devartevents</element>
         <type>package</type>
+        <version>1.2.1</version>
+        <change>
+            <item>Canonical SEF Itemid skips taxonomy/date-scoped events menus (categories, tags, featured, upcoming, today, past, calendar) so filter forms and cross-category links are not prefixed by a one-category or Upcoming menu alias</item>
+            <item>Event detail and category routes append under the unrestricted/categories canonical base instead of trusting Route::_() MenuRules with a scoped Itemid</item>
+            <item>Category links prefer a dedicated One category events menu when source=categories and category_ids is exactly that category</item>
+            <item>Listing filter form and Clear use RouteHelper::getEventsRoute() for the canonical base</item>
+        </change>
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Same class of SEF Itemid fix as DevArt Business 1.2.2–1.2.4 (issue #3 family), with Events date sources treated as listing-scoped</item>
+            <item>Recommended update for sites that mix All/Upcoming/category menus</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartevents</element>
+        <type>package</type>
         <version>1.2.0</version>
         <addition>
             <item>Thin content plugin plg_content_devarteventscomments hosts DevArt Comments on event detail pages (context com_devartevents.item)</item>
