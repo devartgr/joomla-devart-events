@@ -4,6 +4,22 @@
     <changelog>
         <element>pkg_devartevents</element>
         <type>package</type>
+        <version>1.2.2</version>
+        <change>
+            <item>SEF slug policy: correct event/category id with wrong or missing alias accepts the item and marks the route tainted so the Joomla SEF system plugin issues a single 301 to the canonical id-alias URL</item>
+            <item>Router build() maps view=category&amp;id to /category/{id-alias} so the tainted 301 target is SEF, not a query-string URL</item>
+            <item>Unknown event/category id still returns HTTP 404</item>
+        </change>
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Uses Joomla Router::setTainted() (Joomla 5.3+/6 official routing); requires the System - SEF plugin enabled for the 301</item>
+            <item>Recommended update for SEO when aliases change or incomplete id-only URLs are linked</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartevents</element>
+        <type>package</type>
         <version>1.2.1</version>
         <change>
             <item>Canonical SEF Itemid skips taxonomy/date-scoped events menus (categories, tags, featured, upcoming, today, past, calendar) so filter forms and cross-category links are not prefixed by a one-category or Upcoming menu alias</item>
